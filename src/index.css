@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #231f20;
+    overflow-x: hidden;
+  }
+
+  /* Professional Clean Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f7;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #154a56;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0d2d34;
+  }
+
+  ::selection {
+    background: #154a56;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .text-lumilux-teal {
+    color: #154a56;
+  }
+  .bg-lumilux-teal {
+    background-color: #154a56;
+  }
+  .border-lumilux-teal {
+    border-color: rgba(21, 74, 86, 0.2);
+  }
+  .card-architectural {
+    background: #ffffff;
+    border: 1px solid rgba(21, 74, 86, 0.12);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .card-architectural:hover {
+    border-color: rgba(21, 74, 86, 0.35);
+    box-shadow: 0 16px 32px -4px rgba(21, 74, 86, 0.12);
+    transform: translateY(-3px);
+  }
+}
+
+/* Continuous brand marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
