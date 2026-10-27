@@ -32,12 +32,10 @@ export default function Navbar({ onOpenQuote }) {
       path: '/services',
       hasDropdown: true,
       items: [
-        { title: 'Light Installation', path: '/services' },
-        { title: 'Dialux Lighting Design', path: '/services' },
-        { title: 'Smart Automation (IoT)', path: '/services' },
-        { title: 'Precision Lighting Control', path: '/services' },
-        { title: 'Bespoke 3D Luminaires', path: '/services' },
-        { title: 'Technical Consultation', path: '/services' }
+        { title: 'Light Installation', path: '/services?service=light-installation' },
+        { title: 'Design Service', path: '/services?service=design-service' },
+        { title: 'Smart Automation', path: '/services?service=smart-automation' },
+        { title: 'Light Control', path: '/services?service=lighting-control' }
       ]
     },
     { label: 'Products', path: '/products' },
@@ -118,13 +116,13 @@ export default function Navbar({ onOpenQuote }) {
 
           {/* Action CTA */}
           <div className="hidden sm:flex items-center space-x-3">
-            <button
-              onClick={() => onOpenQuote()}
+            <Link
+              to="/contact"
               className="px-4 py-2.5 rounded-xl text-xs font-bold bg-[#154a56] text-white hover:bg-[#0f343d] shadow-xs transition-all flex items-center gap-1.5"
             >
               <span>GET A QUOTE</span>
               <ArrowRight className="w-3 h-3 text-[#d7d225]" />
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Hamburger */}
@@ -160,16 +158,14 @@ export default function Navbar({ onOpenQuote }) {
           </div>
 
           <div className="pt-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenQuote();
-              }}
+            <Link
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3 rounded-xl text-xs font-bold bg-[#154a56] text-white flex items-center justify-center gap-2 shadow-xs"
             >
               <span>Request Free Consultation</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#d7d225]" />
-            </button>
+            </Link>
           </div>
 
           <div className="pt-4 border-t border-slate-200 text-xs text-[#525d66] space-y-1.5">

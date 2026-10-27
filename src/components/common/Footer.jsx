@@ -10,9 +10,9 @@ export default function Footer({ onOpenQuote }) {
     <footer className="relative bg-[#f8fafb] text-[#231f20] border-t border-slate-200 overflow-hidden">
       {/* Main Footer Links */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Col 1: Brand Info (Cols 1-2) */}
-          <div className="lg:col-span-2 space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Col 1: Brand Info */}
+          <div className="space-y-4">
             <Link to="/">
               <BrandLogo variant="dark" className="h-9" showTagline={true} />
             </Link>
@@ -22,56 +22,43 @@ export default function Footer({ onOpenQuote }) {
             </p>
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
-              <a
-                href={COMPANY_INFO.socials.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl bg-white border border-slate-200 hover:bg-[#154a56] hover:text-white text-[#525d66] flex items-center justify-center transition shadow-xs"
+              <span
+                className="w-9 h-9 rounded-xl bg-white border border-slate-200 text-[#525d66] flex items-center justify-center shadow-xs"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
-              </a>
-              <a
-                href={COMPANY_INFO.socials.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl bg-white border border-slate-200 hover:bg-[#154a56] hover:text-white text-[#525d66] flex items-center justify-center transition shadow-xs"
+              </span>
+              <span
+                className="w-9 h-9 rounded-xl bg-white border border-slate-200 text-[#525d66] flex items-center justify-center shadow-xs"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href={COMPANY_INFO.socials.facebook}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl bg-white border border-slate-200 hover:bg-[#154a56] hover:text-white text-[#525d66] flex items-center justify-center transition shadow-xs"
+              </span>
+              <span
+                className="w-9 h-9 rounded-xl bg-white border border-slate-200 text-[#525d66] flex items-center justify-center shadow-xs"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
-              </a>
-              <a
-                href={COMPANY_INFO.socials.whatsapp}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl bg-white border border-slate-200 hover:bg-[#154a56] hover:text-[#d7d225] text-[#154a56] flex items-center justify-center transition shadow-xs"
+              </span>
+              <span
+                className="w-9 h-9 rounded-xl bg-white border border-slate-200 text-[#154a56] flex items-center justify-center shadow-xs"
                 aria-label="WhatsApp"
               >
                 <Phone className="w-4 h-4" />
-              </a>
+              </span>
             </div>
           </div>
 
-          {/* Col 2: Navigation Pages */}
+          {/* Col 2: Services */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider mb-4 text-[#154a56]">
-              Navigation
+              Services
             </h4>
             <ul className="space-y-2.5 text-xs text-[#525d66]">
-              <li><Link to="/" className="hover:text-[#154a56] transition">Home</Link></li>
-              <li><Link to="/about" className="hover:text-[#154a56] transition">About Corporate</Link></li>
-              <li><Link to="/services" className="hover:text-[#154a56] transition">Turnkey Services</Link></li>
-              <li><Link to="/products" className="hover:text-[#154a56] transition">Product Systems</Link></li>
-              <li><Link to="/contact" className="hover:text-[#154a56] transition">Contact Desks</Link></li>
+              <li><Link to="/services?service=light-installation" className="hover:text-[#154a56] transition">Light Installation</Link></li>
+              <li><Link to="/services?service=design-service" className="hover:text-[#154a56] transition">Design Service</Link></li>
+              <li><Link to="/services?service=smart-automation" className="hover:text-[#154a56] transition">Smart Automation</Link></li>
+              <li><Link to="/services?service=lighting-control" className="hover:text-[#154a56] transition">Light Control</Link></li>
             </ul>
           </div>
 
@@ -90,33 +77,18 @@ export default function Footer({ onOpenQuote }) {
             </ul>
           </div>
 
-          {/* Col 4: Regional Desks */}
+          {/* Col 4: Navigation */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider mb-4 text-[#154a56]">
-              UAE Regional Desks
+              Company
             </h4>
-            <div className="space-y-3.5 text-xs text-[#525d66]">
-              <div>
-                <strong className="text-[#231f20] block text-[11px] font-bold">Dubai Head Office</strong>
-                <a href={`tel:${COMPANY_INFO.headquarters.phone}`} className="text-[#154a56] font-semibold hover:underline">
-                  {COMPANY_INFO.headquarters.phoneDisplay}
-                </a>
-                <span className="block text-[11px] text-[#525d66] mt-0.5">{COMPANY_INFO.headquarters.building}</span>
-              </div>
-              <div>
-                <strong className="text-[#231f20] block text-[11px] font-bold">Abu Dhabi Branch</strong>
-                <a href={`tel:${COMPANY_INFO.branchOffice.phone}`} className="text-[#154a56] font-semibold hover:underline">
-                  {COMPANY_INFO.branchOffice.phoneDisplay}
-                </a>
-                <span className="block text-[11px] text-[#525d66] mt-0.5">{COMPANY_INFO.branchOffice.building}</span>
-              </div>
-              <div>
-                <strong className="text-[#231f20] block text-[11px] font-bold">Email Desk</strong>
-                <a href={`mailto:${COMPANY_INFO.headquarters.email}`} className="text-[#154a56] hover:underline font-semibold">
-                  {COMPANY_INFO.headquarters.email}
-                </a>
-              </div>
-            </div>
+            <ul className="space-y-2.5 text-xs text-[#525d66]">
+              <li><Link to="/" className="hover:text-[#154a56] transition">Home</Link></li>
+              <li><Link to="/about" className="hover:text-[#154a56] transition">About Corporate</Link></li>
+              <li><Link to="/services" className="hover:text-[#154a56] transition">Services</Link></li>
+              <li><Link to="/products" className="hover:text-[#154a56] transition">Products</Link></li>
+              <li><Link to="/contact" className="hover:text-[#154a56] transition">Contact Desks</Link></li>
+            </ul>
           </div>
         </div>
 

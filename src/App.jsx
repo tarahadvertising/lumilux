@@ -74,12 +74,6 @@ export default function App() {
           </a>
         </div>
 
-        {/* Global Consultation & Quote Modal */}
-        <QuoteModal
-          isOpen={isQuoteOpen}
-          onClose={() => setIsQuoteOpen(false)}
-          initialData={quoteData}
-        />
       </div>
     </BrowserRouter>
   );

@@ -9,7 +9,7 @@ export default function QuoteModal({ isOpen, onClose, initialData = null }) {
     company: '',
     location: 'Dubai',
     projectType: 'Residential Villa',
-    serviceNeeded: 'Supply & Installation',
+    serviceNeeded: 'Light Installation',
     budgetRange: 'AED 50k - 150k',
     message: ''
   });
@@ -22,11 +22,13 @@ export default function QuoteModal({ isOpen, onClose, initialData = null }) {
       setFormData(prev => ({
         ...prev,
         projectType: initialData.space || prev.projectType,
-        message: `Generated from Lux Calculator:\n• Area: ${initialData.area}\n• Target Lux: ${initialData.targetLux}\n• Lumens: ${initialData.lumens}\n• Recommended Fixtures: ${initialData.fixtures}`
+        serviceNeeded: initialData.serviceNeeded || prev.serviceNeeded,
+        message: initialData.area
+          ? `Generated from Lux Calculator:\n• Area: ${initialData.area}\n• Target Lux: ${initialData.targetLux}\n• Lumens: ${initialData.lumens}\n• Recommended Fixtures: ${initialData.fixtures}`
+          : (initialData.serviceNeeded ? `Inquiry regarding ${initialData.serviceNeeded}. Please share technical specification dossier, project feasibility, and timeline.` : prev.message)
       }));
     }
   }, [initialData]);
-
   if (!isOpen) return null;
 
   const handleSubmit = (e) => {
@@ -177,11 +179,13 @@ export default function QuoteModal({ isOpen, onClose, initialData = null }) {
                     onChange={(e) => setFormData({ ...formData, serviceNeeded: e.target.value })}
                     className="w-full px-3 py-2.5 rounded-xl bg-[#f8fafb] border border-slate-300 text-[#231f20] focus:outline-none focus:border-[#154a56] focus:bg-white text-xs"
                   >
-                    <option value="Supply & Installation">Full Supply & Installation</option>
-                    <option value="Supply Only">Luminaire Supply Only</option>
-                    <option value="Lighting Design & Dialux">Lighting Design & Dialux</option>
-                    <option value="Smart Automation & Control">Smart Automation (DALI/KNX)</option>
-                    <option value="Bespoke 3D Luminaire">Custom 3D / Bespoke Luminaire</option>
+                    <option value="Turnkey Light Installation">Turnkey Light Installation</option>
+                    <option value="Dialux Photometric Lighting Design">Dialux Photometric Design</option>
+                    <option value="Smart Lighting Automation & IoT">Smart Lighting Automation (IoT)</option>
+                    <option value="Precision Lighting Control Systems">Lighting Control & Dimming (DALI/DMX)</option>
+                    <option value="UAE Bespoke 3D & Custom Luminaires">UAE Bespoke 3D Luminaire</option>
+                    <option value="Technical Consultation & Value Engineering">Technical & Value Engineering</option>
+                    <option value="Full Supply & Installation">Full Turnkey Supply & Install</option>
                   </select>
                 </div>
               </div>

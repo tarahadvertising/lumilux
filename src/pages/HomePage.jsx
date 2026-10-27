@@ -132,14 +132,14 @@ export default function HomePage({ onOpenQuote }) {
                 Turnkey Lighting Services
               </h2>
               <p className="text-sm text-[#525d66] mt-1 max-w-xl">
-                Comprehensive technical services reference from Spark World Lighting, executed by certified engineers in Dubai and Abu Dhabi.
+                Comprehensive architectural lighting engineering solutions, executed by certified engineers in Dubai and Abu Dhabi.
               </p>
             </div>
             <Link
               to="/services"
               className="inline-flex items-center gap-2 text-xs font-bold text-[#154a56] hover:text-[#b8982f] transition uppercase tracking-wider"
             >
-              <span>View All 6 Services</span>
+              <span>Explore All Services</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -161,7 +161,7 @@ export default function HomePage({ onOpenQuote }) {
                 <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-[11px] text-[#154a56] font-semibold">{service.badge}</span>
                   <Link
-                    to="/services"
+                    to={`/services?service=${service.id}`}
                     className="text-xs font-bold text-[#154a56] hover:text-[#b8982f] flex items-center gap-1"
                   >
                     Details <ArrowRight className="w-3.5 h-3.5" />
