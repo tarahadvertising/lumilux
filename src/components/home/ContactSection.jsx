@@ -24,7 +24,7 @@ export default function ContactSection({ onOpenQuote }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f0f5f7] border border-[#154a56]/20 text-[#154a56] text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#d7d225]/20 border border-[#d7d225]/40 text-[#154a56] text-xs font-bold uppercase tracking-wider mb-3">
             <MessageSquare className="w-3.5 h-3.5 text-[#154a56]" />
             UAE Regional Desks
           </div>
@@ -41,7 +41,7 @@ export default function ContactSection({ onOpenQuote }) {
           {/* Left Column: Office Cards (Cols 1-5) */}
           <div className="lg:col-span-5 space-y-5">
             {/* Dubai Head Office */}
-            <div className="bg-[#f8fafb] p-7 rounded-2xl border border-slate-200 hover:border-[#154a56] transition-all shadow-sm">
+            <div className="bg-[#f8fafb] p-7 rounded-2xl border border-slate-200 border-t-4 border-t-[#d7d225] transition-all shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs uppercase font-bold tracking-wider text-[#154a56] flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-[#154a56]" /> Head Office
@@ -55,11 +55,11 @@ export default function ContactSection({ onOpenQuote }) {
               </p>
 
               <div className="space-y-2.5 pt-4 border-t border-slate-200 text-xs">
-                <a href={`tel:${COMPANY_INFO.headquarters.phone}`} className="flex items-center gap-2 text-[#231f20] hover:text-[#154a56] transition font-medium">
+                <a href={`tel:${COMPANY_INFO.headquarters.phone}`} className="flex items-center gap-2 text-[#231f20] transition font-medium">
                   <Phone className="w-3.5 h-3.5 text-[#154a56]" />
                   <span>Direct: <strong className="text-[#154a56] font-mono">{COMPANY_INFO.headquarters.phoneDisplay}</strong></span>
                 </a>
-                <a href={`mailto:${COMPANY_INFO.headquarters.email}`} className="flex items-center gap-2 text-[#525d66] hover:text-[#154a56] transition">
+                <a href={`mailto:${COMPANY_INFO.headquarters.email}`} className="flex items-center gap-2 text-[#525d66] transition">
                   <Mail className="w-3.5 h-3.5 text-[#154a56]" />
                   <span>{COMPANY_INFO.headquarters.email}</span>
                 </a>
@@ -71,7 +71,7 @@ export default function ContactSection({ onOpenQuote }) {
             </div>
 
             {/* Abu Dhabi Branch Office */}
-            <div className="bg-[#f8fafb] p-7 rounded-2xl border border-slate-200 hover:border-[#154a56] transition-all shadow-sm">
+            <div className="bg-[#f8fafb] p-7 rounded-2xl border border-slate-200 border-t-4 border-t-[#d7d225] transition-all shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs uppercase font-bold tracking-wider text-[#154a56] flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-[#154a56]" /> Branch Office
@@ -85,11 +85,11 @@ export default function ContactSection({ onOpenQuote }) {
               </p>
 
               <div className="space-y-2.5 pt-4 border-t border-slate-200 text-xs">
-                <a href={`tel:${COMPANY_INFO.branchOffice.phone}`} className="flex items-center gap-2 text-[#231f20] hover:text-[#154a56] transition font-medium">
+                <a href={`tel:${COMPANY_INFO.branchOffice.phone}`} className="flex items-center gap-2 text-[#231f20] transition font-medium">
                   <Phone className="w-3.5 h-3.5 text-[#154a56]" />
                   <span>Direct: <strong className="text-[#154a56] font-mono">{COMPANY_INFO.branchOffice.phoneDisplay}</strong></span>
                 </a>
-                <a href={`mailto:${COMPANY_INFO.branchOffice.email}`} className="flex items-center gap-2 text-[#525d66] hover:text-[#154a56] transition">
+                <a href={`mailto:${COMPANY_INFO.branchOffice.email}`} className="flex items-center gap-2 text-[#525d66] transition">
                   <Mail className="w-3.5 h-3.5 text-[#154a56]" />
                   <span>{COMPANY_INFO.branchOffice.email}</span>
                 </a>
@@ -101,20 +101,20 @@ export default function ContactSection({ onOpenQuote }) {
               href={COMPANY_INFO.socials.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 rounded-2xl bg-[#f0f7f8] border border-[#154a56]/20 flex items-center justify-between group hover:border-[#154a56] transition shadow-sm"
+              className="p-4 rounded-2xl bg-[#f0f7f8] border border-[#154a56]/20 border-l-4 border-l-[#d7d225] flex items-center justify-between group transition shadow-sm"
             >
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#154a56] block">Instant Architectural Support</span>
                 <div className="text-xs font-bold text-[#154a56] mt-0.5">Chat with an Engineer on WhatsApp</div>
               </div>
-              <span className="text-xs font-bold text-[#154a56] group-hover:translate-x-1 transition-transform">
+              <span className="text-xs font-bold text-[#154a56] transition-transform">
                 +971 50 187 5414 →
               </span>
             </a>
           </div>
 
           {/* Right Column: Direct Messaging Form (Cols 6-12) */}
-          <div className="lg:col-span-7 bg-white rounded-2xl p-7 sm:p-9 border border-slate-200 shadow-xl">
+          <div className="lg:col-span-7 bg-white rounded-2xl p-7 sm:p-9 border border-slate-200 border-t-4 border-t-[#d7d225] shadow-xl">
             {formSent ? (
               <div className="py-12 text-center space-y-4">
                 <CheckCircle2 className="w-14 h-14 text-[#154a56] mx-auto" />
@@ -124,7 +124,7 @@ export default function ContactSection({ onOpenQuote }) {
                 </p>
                 <button
                   onClick={() => setFormSent(false)}
-                  className="px-6 py-2.5 rounded-xl bg-[#154a56] text-white text-xs font-bold hover:bg-[#0d2f37] transition"
+                  className="px-6 py-2.5 rounded-xl bg-[#d7d225] text-[#154a56] text-xs font-extrabold shadow-sm transition"
                 >
                   Send Another Inquiry
                 </button>
@@ -207,14 +207,14 @@ export default function ContactSection({ onOpenQuote }) {
                     <button
                       type="button"
                       onClick={() => onOpenQuote()}
-                      className="text-xs text-[#154a56] hover:underline font-bold"
+                      className="text-xs text-[#154a56] font-bold"
                     >
                       Need formal tender quotation? Open Quote Wizard →
                     </button>
 
                     <button
                       type="submit"
-                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#154a56] hover:bg-[#0d2f37] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition"
+                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#d7d225] text-[#154a56] font-extrabold text-xs flex items-center justify-center gap-2 shadow-md transition"
                     >
                       <Send className="w-3.5 h-3.5" />
                       <span>Send Direct Message</span>
@@ -247,7 +247,7 @@ export default function ContactSection({ onOpenQuote }) {
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-4 text-left flex items-center justify-between gap-4 hover:bg-slate-50 transition"
+                    className="w-full p-4 text-left flex items-center justify-between gap-4 transition"
                   >
                     <span className="text-xs sm:text-sm font-bold text-[#154a56]">{faq.q}</span>
                     <ChevronDown className={`w-4 h-4 text-[#154a56] transition-transform ${isOpen ? 'rotate-180' : ''}`} />

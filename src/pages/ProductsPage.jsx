@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import PageHeader from '../components/common/PageHeader';
 import { PRODUCTS, PRODUCT_CATEGORIES } from '../data/products';
-import { Search, X, FileText, CheckCircle2 } from 'lucide-react';
+import { Search, X, FileText, CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function ProductsPage({ onOpenQuote }) {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -36,6 +36,22 @@ export default function ProductsPage({ onOpenQuote }) {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+          {/* Category Filter Pills in Lumilux Accent */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
+            {PRODUCT_CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+                  activeCategory === cat.id
+                    ? 'bg-[#d7d225] text-[#154a56] shadow-md tracking-wider'
+                    : 'bg-[#f8fafb] text-[#525d66] border border-slate-200'
+                }`}
+              >
+                {cat.name}
+              </button>
+            ))}
+          </div>
 
           {filteredProducts.length === 0 ? (
             <div className="text-center py-20 border border-dashed border-slate-200 rounded-3xl p-8">
@@ -45,7 +61,7 @@ export default function ProductsPage({ onOpenQuote }) {
                   setActiveCategory('all');
                   setSearchQuery('');
                 }}
-                className="mt-4 px-4 py-2 rounded-xl text-xs font-bold bg-[#154a56] text-white"
+                className="mt-4 px-4 py-2 rounded-xl text-xs font-bold bg-[#d7d225] text-[#154a56]"
               >
                 Reset Catalog Filters
               </button>
@@ -55,7 +71,7 @@ export default function ProductsPage({ onOpenQuote }) {
               {filteredProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:border-[#154a56]/40 hover:shadow-lg transition-all flex flex-col justify-between"
+                  className="bg-white border border-slate-200 border-t-4 border-t-[#d7d225] rounded-2xl overflow-hidden shadow-xs transition-all flex flex-col justify-between"
                 >
                   <div>
                     {/* Image Box */}
@@ -63,8 +79,14 @@ export default function ProductsPage({ onOpenQuote }) {
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-500 "
                       />
+                      <span className="absolute top-3 left-3 text-[10px] font-extrabold text-[#154a56] bg-[#d7d225] px-2.5 py-1 rounded-md uppercase tracking-wider shadow-sm">
+                        {product.categoryName}
+                      </span>
+                      <span className="absolute bottom-3 right-3 text-[10px] font-mono font-bold text-[#d7d225] bg-black/70 backdrop-blur-sm px-2 py-0.5 rounded">
+                        {product.model}
+                      </span>
                     </div>
 
                     {/* Content */}
@@ -78,7 +100,7 @@ export default function ProductsPage({ onOpenQuote }) {
                     </div>
                   </div>
 
-                  {/* Actions */}
+                  {/* Actions in Lumilux Accent Yellow */}
                   <div className="p-6 pt-0 flex items-center justify-end">
                     <button
                       onClick={() =>
@@ -87,9 +109,10 @@ export default function ProductsPage({ onOpenQuote }) {
                           message: `Product Inquiry: ${product.name} (${product.model})`
                         })
                       }
-                      className="w-full py-2.5 rounded-xl text-xs font-bold bg-[#154a56] text-white hover:bg-[#0f343d] transition shadow-xs"
+                      className="w-full py-2.5 rounded-xl text-xs font-extrabold bg-[#d7d225] text-[#154a56] shadow-sm transition flex items-center justify-center gap-2 tracking-wider"
                     >
-                      Inquire
+                      <span>Inquire</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#154a56]" />
                     </button>
                   </div>
                 </div>
@@ -105,7 +128,7 @@ export default function ProductsPage({ onOpenQuote }) {
           <div className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto text-[#231f20]">
             <button
               onClick={() => setSelectedProduct(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-[#231f20] transition"
+              className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 text-slate-500 transition"
             >
               <X className="w-5 h-5" />
             </button>
@@ -175,7 +198,7 @@ export default function ProductsPage({ onOpenQuote }) {
                     message: `Official Quote Request for: ${p.name} (Model: ${p.model})`
                   });
                 }}
-                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#154a56] text-white hover:bg-[#0f343d] transition shadow-xs"
+                className="px-5 py-2.5 rounded-xl text-xs font-extrabold bg-[#d7d225] text-[#154a56] transition shadow-md tracking-wider"
               >
                 Request Quotation & IES Files
               </button>

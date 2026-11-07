@@ -41,8 +41,8 @@ export default function ProductsSection({ onOpenQuote }) {
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
                 selectedCategory === cat.id
-                  ? 'bg-[#154a56] text-white shadow-sm'
-                  : 'bg-[#f8fafb] text-[#525d66] hover:text-[#154a56] border border-slate-200 hover:bg-slate-100'
+                  ? 'bg-[#d7d225] text-[#154a56] shadow-md tracking-wider'
+                  : 'bg-[#f8fafb] text-[#525d66] border border-slate-200 '
               }`}
             >
               {cat.name}
@@ -55,7 +55,7 @@ export default function ProductsSection({ onOpenQuote }) {
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="group bg-white rounded-2xl border border-slate-200 hover:border-[#154a56] transition-all duration-300 overflow-hidden flex flex-col justify-between hover:-translate-y-1 shadow-sm hover:shadow-xl"
+              className="group bg-white rounded-2xl border border-slate-200 border-t-4 border-t-[#d7d225] transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-sm "
             >
               <div>
                 {/* Product Image */}
@@ -63,16 +63,16 @@ export default function ProductsSection({ onOpenQuote }) {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 "
                   />
                   
                   {/* Category Pill */}
-                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-bold text-[#154a56] border border-slate-200 shadow-sm">
+                  <div className="absolute top-3 left-3 bg-[#d7d225] px-2.5 py-1 rounded-md text-[10px] font-extrabold text-[#154a56] shadow-sm uppercase tracking-wider">
                     {product.categoryName}
                   </div>
 
                   {product.featured && (
-                    <div className="absolute top-3 right-3 bg-[#154a56] text-white font-bold px-2 py-0.5 rounded text-[9px] uppercase tracking-wider">
+                    <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm text-[#d7d225] font-bold px-2 py-0.5 rounded text-[9px] uppercase tracking-wider">
                       Flagship
                     </div>
                   )}
@@ -81,7 +81,7 @@ export default function ProductsSection({ onOpenQuote }) {
                 {/* Product Details */}
                 <div className="p-5">
                   <div className="text-[10px] font-mono text-[#154a56] mb-1 font-bold">{product.model}</div>
-                  <h3 className="text-sm font-bold text-[#231f20] group-hover:text-[#154a56] transition line-clamp-2">
+                  <h3 className="text-sm font-bold text-[#231f20] transition line-clamp-2">
                     {product.name}
                   </h3>
                   
@@ -111,7 +111,7 @@ export default function ProductsSection({ onOpenQuote }) {
               <div className="p-5 pt-0 flex items-center justify-between gap-2">
                 <button
                   onClick={() => setActiveProduct(product)}
-                  className="flex-1 py-2 px-3 rounded-xl bg-[#f8fafb] hover:bg-[#f0f5f7] text-[#154a56] border border-slate-200 text-xs font-semibold flex items-center justify-center gap-1.5 transition"
+                  className="flex-1 py-2 px-3 rounded-xl bg-[#f8fafb] text-[#154a56] border border-slate-200 text-xs font-semibold flex items-center justify-center gap-1.5 transition"
                 >
                   <Eye className="w-3.5 h-3.5" />
                   <span>Specs</span>
@@ -119,10 +119,10 @@ export default function ProductsSection({ onOpenQuote }) {
 
                 <button
                   onClick={() => onOpenQuote({ space: `Fixture: ${product.name} (${product.model})` })}
-                  className="py-2 px-3 rounded-xl bg-[#154a56] hover:bg-[#0d2f37] text-white text-xs font-bold transition flex items-center gap-1 shadow-sm"
+                  className="py-2 px-3 rounded-xl bg-[#d7d225] text-[#154a56] text-xs font-extrabold transition flex items-center gap-1 shadow-sm tracking-wider"
                 >
                   <span>Quote</span>
-                  <ArrowRight className="w-3 h-3" />
+                  <ArrowRight className="w-3 h-3 text-[#154a56]" />
                 </button>
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function ProductsSection({ onOpenQuote }) {
           <div className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setActiveProduct(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 transition"
+              className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 text-slate-500 transition"
             >
               <X className="w-5 h-5" />
             </button>
@@ -200,7 +200,7 @@ export default function ProductsSection({ onOpenQuote }) {
                   setActiveProduct(null);
                   onOpenQuote({ space: p });
                 }}
-                className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#154a56] hover:bg-[#0d2f37] text-white text-xs font-bold shadow-sm"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#154a56] text-white text-xs font-bold shadow-sm"
               >
                 Inquire on Bulk Supply & Pricing
               </button>

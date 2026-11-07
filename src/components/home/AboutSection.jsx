@@ -18,7 +18,8 @@ export default function AboutSection({ onOpenQuote }) {
                 />
                 
                 {/* Overlay Badge in Clean White */}
-                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-slate-200 flex items-center gap-3.5 shadow-md">
+                <div className="absolute bottom-4 
+                -4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-slate-200 flex items-center gap-3.5 shadow-md">
                   <div className="w-12 h-12 rounded-xl bg-[#f0f5f7] border border-[#154a56]/20 flex items-center justify-center p-2 text-white shrink-0">
                     <BrandLogo variant="mark" className="h-8" />
                   </div>
@@ -30,8 +31,8 @@ export default function AboutSection({ onOpenQuote }) {
               </div>
 
               {/* Floating Certification Card */}
-              <div className="absolute -top-5 -right-5 hidden sm:flex items-center gap-2.5 bg-white p-3.5 rounded-2xl border border-slate-200 shadow-lg">
-                <Award className="w-6 h-6 text-[#154a56]" />
+              <div className="absolute -top-5 -right-5 hidden sm:flex items-center gap-2.5 bg-white p-3.5 rounded-2xl border border-slate-200 border-l-4 border-l-[#d7d225] shadow-lg">
+                <Award className="w-6 h-6 text-[#d7d225]" />
                 <div className="text-[11px]">
                   <strong className="text-[#154a56] block font-mono font-bold">ISO 9001:2015</strong>
                   <span className="text-[#525d66]">Quality Certified</span>
@@ -42,13 +43,13 @@ export default function AboutSection({ onOpenQuote }) {
 
           {/* Right Column: Narrative content */}
           <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f0f5f7] border border-[#154a56]/20 text-[#154a56] text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#d7d225]/20 border border-[#d7d225]/40 text-[#154a56] text-xs font-bold uppercase tracking-wider">
               <Compass className="w-3.5 h-3.5 text-[#154a56]" />
               Brand Heritage & Vision
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#154a56] tracking-tight leading-tight">
-              About <span className="text-[#231f20]">Lumilux Lighting</span>
+              About <span className="text-[#d7d225]">Lumilux Lighting</span>
             </h2>
 
             <div className="space-y-4 text-[#525d66] text-sm sm:text-base leading-relaxed">
@@ -74,7 +75,7 @@ export default function AboutSection({ onOpenQuote }) {
                 "3 to 7 Years Performance Warranty"
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-xs text-[#231f20] font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#154a56] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#d7d225] shrink-0" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -84,15 +85,15 @@ export default function AboutSection({ onOpenQuote }) {
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <button
                 onClick={() => onOpenQuote()}
-                className="px-6 py-3.5 rounded-xl bg-[#154a56] hover:bg-[#0d2f37] text-white font-bold text-xs flex items-center gap-2 shadow-sm transition"
+                className="px-6 py-3.5 rounded-xl bg-[#d7d225] text-[#154a56] font-extrabold text-xs flex items-center gap-2 shadow-md transition tracking-wider"
               >
                 <span>CONSULT WITH OUR LIGHTING ENGINEERS</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-[#154a56]" />
               </button>
 
               <a
                 href="#calculator"
-                className="px-5 py-3.5 rounded-xl bg-[#f8fafb] hover:bg-[#edf2f4] text-[#154a56] border border-slate-300 font-semibold text-xs flex items-center gap-2 transition"
+                className="px-5 py-3.5 rounded-xl bg-[#f8fafb] text-[#154a56] border border-slate-300 font-semibold text-xs flex items-center gap-2 transition"
               >
                 <FileText className="w-4 h-4 text-[#154a56]" />
                 <span>Estimate Space Lux</span>

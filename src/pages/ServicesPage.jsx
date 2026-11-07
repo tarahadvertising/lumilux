@@ -55,48 +55,58 @@ export default function ServicesPage({ onOpenQuote }) {
                 <div
                   key={service.id}
                   id={`service-${service.id}`}
-                  className="bg-white border border-slate-200 rounded-3xl p-7 shadow-xs hover:border-[#154a56]/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                  className="group bg-white border border-slate-200 border-t-4 border-t-[#d7d225] rounded-3xl overflow-hidden shadow-xs transition-all duration-300 flex flex-col justify-between"
                 >
                   <div>
-                    {/* Header with Icon and Number */}
-                    <div className="flex items-center justify-between mb-5">
-                      <div className="w-12 h-12 rounded-xl bg-[#f0f5f7] border border-[#154a56]/15 flex items-center justify-center text-[#154a56]">
-                        <IconComponent className="w-6 h-6" />
+                    {/* Header with Image, Icon and Number */}
+                    <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-700 "
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                      <div className="absolute top-3 left-3 w-10 h-10 rounded-xl bg-[#d7d225] flex items-center justify-center text-[#154a56] shadow-md font-bold">
+                        <IconComponent className="w-5 h-5 text-[#154a56]" />
                       </div>
-                      <span className="font-mono text-xs font-bold text-slate-400">0{index + 1}</span>
+                      <span className="absolute top-3 right-3 font-mono text-xs font-bold text-white bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-lg">
+                        0{index + 1}
+                      </span>
+                      <span className="absolute bottom-3 left-3 text-[10px] font-extrabold text-[#154a56] bg-[#d7d225] backdrop-blur-sm px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm">
+                        {service.badge}
+                      </span>
                     </div>
 
-                    <span className="text-[11px] font-bold text-[#154a56] uppercase tracking-wider block mb-1">
-                      {service.badge}
-                    </span>
-                    <h3 className="text-xl font-bold text-[#154a56]">
-                      {service.title}
-                    </h3>
-                    <p className="text-xs text-[#525d66] mt-2.5 leading-relaxed min-h-[48px]">
-                      {service.shortDesc}
-                    </p>
+                    <div className="p-6 pb-0">
+                      <h3 className="text-xl font-bold text-[#154a56] transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-xs text-[#525d66] mt-2.5 leading-relaxed min-h-[48px]">
+                        {service.shortDesc}
+                      </p>
 
-                    {/* Features checklist */}
-                    <ul className="mt-5 space-y-2 border-t border-slate-100 pt-5 text-xs text-[#525d66]">
-                      {service.highlights.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#154a56] mt-0.5 shrink-0" />
-                          <span className="leading-snug">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                      {/* Features checklist */}
+                      <ul className="mt-5 space-y-2 border-t border-slate-100 pt-5 text-xs text-[#525d66]">
+                        {service.highlights.map((item, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#d7d225] mt-0.5 shrink-0" />
+                            <span className="leading-snug">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
 
-                  <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                  <div className="p-6 pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
                     <button
                       onClick={() => setSelectedService(service)}
-                      className="text-xs font-bold text-[#154a56] hover:text-[#b8982f] flex items-center gap-1 transition"
+                      className="text-xs font-bold text-[#154a56] flex items-center gap-1 transition"
                     >
-                      Technical Scope <ArrowRight className="w-3.5 h-3.5" />
+                      Technical Scope <ArrowRight className="w-3.5 h-3.5 text-[#d7d225]" />
                     </button>
                     <Link
                       to="/contact"
-                      className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#154a56] text-white hover:bg-[#0f343d] transition shadow-xs"
+                      className="px-3.5 py-1.5 rounded-lg text-xs font-extrabold bg-[#d7d225] text-[#154a56] transition shadow-sm tracking-wider"
                     >
                       Inquire
                     </Link>
@@ -132,8 +142,8 @@ export default function ServicesPage({ onOpenQuote }) {
               { step: '05', title: 'Supply & Installation', desc: 'Professional installation by certified electrical engineers with laser-levelled precision.' },
               { step: '06', title: 'Testing & Commissioning', desc: 'Lux meter verification, scene automation programming, and comprehensive as-built documentation.' },
             ].map((item) => (
-              <div key={item.step} className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-[#154a56]/40 hover:shadow-md transition">
-                <span className="text-2xl font-mono font-extrabold text-[#154a56]">{item.step}</span>
+              <div key={item.step} className="p-6 rounded-2xl bg-white border border-slate-200 border-l-4 border-l-[#d7d225] shadow-xs transition">
+                <span className="text-2xl font-mono font-extrabold text-[#d7d225]">{item.step}</span>
                 <h4 className="text-base font-bold text-[#231f20] mt-2">{item.title}</h4>
                 <p className="text-xs text-[#525d66] mt-2 leading-relaxed">{item.desc}</p>
               </div>
@@ -160,7 +170,7 @@ export default function ServicesPage({ onOpenQuote }) {
             </div>
             <Link
               to="/contact"
-              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold bg-[#d7d225] hover:bg-[#c4bf1d] text-[#154a56] shadow-sm transition whitespace-nowrap text-center"
+              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold bg-[#d7d225] text-[#154a56] shadow-sm transition whitespace-nowrap text-center"
             >
               REQUEST TECHNICAL SPECIFICATION
             </Link>
@@ -174,7 +184,7 @@ export default function ServicesPage({ onOpenQuote }) {
           <div className="relative w-full max-w-xl bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto text-[#231f20]">
             <button
               onClick={() => setSelectedService(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-[#231f20] transition"
+              className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 text-slate-500 transition"
             >
               <X className="w-5 h-5" />
             </button>
@@ -183,6 +193,20 @@ export default function ServicesPage({ onOpenQuote }) {
               <FileCheck2 className="w-3.5 h-3.5" />
               Service Dossier
             </div>
+
+            {selectedService.image && (
+              <div className="relative h-48 w-full rounded-2xl overflow-hidden my-3 bg-slate-100 shadow-xs">
+                <img
+                  src={selectedService.image}
+                  alt={selectedService.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                <span className="absolute bottom-3 left-3 text-[10px] font-bold text-white bg-[#154a56]/90 backdrop-blur-sm px-2.5 py-1 rounded-lg uppercase tracking-wider">
+                  {selectedService.badge}
+                </span>
+              </div>
+            )}
 
             <h3 className="text-2xl font-extrabold text-[#154a56]">{selectedService.title}</h3>
             <p className="text-xs text-[#b8982f] font-semibold mt-0.5">{selectedService.tagline}</p>
@@ -219,13 +243,12 @@ export default function ServicesPage({ onOpenQuote }) {
                 </div>
               </div>
             </div>
-
             <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
               <span className="text-xs text-slate-400">Technical Dossier</span>
               <Link
                 to="/contact"
                 onClick={() => setSelectedService(null)}
-                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#154a56] text-white hover:bg-[#0f343d] transition shadow-xs"
+                className="px-5 py-2.5 rounded-xl text-xs font-extrabold bg-[#d7d225] text-[#154a56] transition shadow-md tracking-wider"
               >
                 Inquire About This Service
               </Link>

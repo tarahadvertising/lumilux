@@ -22,9 +22,9 @@ export default function PageHeader({ title, subtitle, breadcrumb, badge, bgImage
         {/* Breadcrumb */}
         {breadcrumb && (
           <nav className={`flex items-center gap-2 text-xs mb-4 font-medium ${bgImage ? 'text-slate-300' : 'text-[#525d66]'}`} aria-label="Breadcrumb">
-            <Link to="/" className={`transition ${bgImage ? 'hover:text-[#d7d225]' : 'hover:text-[#154a56]'}`}>Home</Link>
+            <Link to="/" className={`transition ${bgImage ? '' : ''}`}>Home</Link>
             <ChevronRight className={`w-3.5 h-3.5 ${bgImage ? 'text-slate-400' : 'text-slate-400'}`} />
-            <span className={bgImage ? 'text-white font-semibold' : 'text-[#154a56] font-semibold'}>{breadcrumb}</span>
+            <span className={bgImage ? 'text-[#d7d225] font-bold' : 'text-[#154a56] font-bold'}>{breadcrumb}</span>
           </nav>
         )}
 
@@ -42,8 +42,9 @@ export default function PageHeader({ title, subtitle, breadcrumb, badge, bgImage
           <h1 className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight ${bgImage ? 'text-white' : 'text-[#154a56]'}`}>
             {title}
           </h1>
+          <div className="h-1 w-14 bg-[#d7d225] rounded-full mt-4 mb-2" />
           {subtitle && (
-            <p className={`mt-3 text-sm sm:text-base leading-relaxed ${bgImage ? 'text-slate-200' : 'text-[#525d66]'}`}>
+            <p className={`mt-2 text-sm sm:text-base leading-relaxed ${bgImage ? 'text-slate-200' : 'text-[#525d66]'}`}>
               {subtitle}
             </p>
           )}

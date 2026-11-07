@@ -56,19 +56,19 @@ export default function LightingSimulator() {
         <div className="flex items-center bg-[#f0f5f7] p-1 rounded-xl border border-slate-200 text-xs">
           <button
             onClick={() => setScene('villa')}
-            className={`px-3.5 py-1.5 rounded-lg font-semibold transition ${scene === 'villa' ? 'bg-[#154a56] text-white shadow-sm' : 'text-[#525d66] hover:text-[#154a56]'}`}
+            className={`px-3.5 py-1.5 rounded-lg font-semibold transition ${scene === 'villa' ? 'bg-[#154a56] text-white shadow-sm' : 'text-[#525d66] '}`}
           >
             Luxury Villa
           </button>
           <button
             onClick={() => setScene('office')}
-            className={`px-3.5 py-1.5 rounded-lg font-semibold transition ${scene === 'office' ? 'bg-[#154a56] text-white shadow-sm' : 'text-[#525d66] hover:text-[#154a56]'}`}
+            className={`px-3.5 py-1.5 rounded-lg font-semibold transition ${scene === 'office' ? 'bg-[#154a56] text-white shadow-sm' : 'text-[#525d66] '}`}
           >
             Corporate Office
           </button>
           <button
             onClick={() => setScene('facade')}
-            className={`px-3.5 py-1.5 rounded-lg font-semibold transition ${scene === 'facade' ? 'bg-[#154a56] text-white shadow-sm' : 'text-[#525d66] hover:text-[#154a56]'}`}
+            className={`px-3.5 py-1.5 rounded-lg font-semibold transition ${scene === 'facade' ? 'bg-[#154a56] text-white shadow-sm' : 'text-[#525d66] '}`}
           >
             Architectural Façade
           </button>
@@ -178,7 +178,7 @@ export default function LightingSimulator() {
                       className={`flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg text-xs font-semibold border transition ${
                         timeOfDay === item.id
                           ? 'bg-[#154a56] border-[#154a56] text-white shadow-sm'
-                          : 'bg-white border-slate-200 text-[#525d66] hover:text-[#154a56]'
+                          : 'bg-white border-slate-200 text-[#525d66] '
                       }`}
                     >
                       <Icon className="w-3.5 h-3.5" />
@@ -209,7 +209,7 @@ export default function LightingSimulator() {
                     className={`py-2 px-2 rounded-lg text-xs font-semibold border text-center transition ${
                       cct === item.temp
                         ? 'border-[#154a56] bg-white text-[#154a56] font-bold ring-2 ring-[#154a56]/20 shadow-sm'
-                        : 'border-slate-200 bg-white text-[#525d66] hover:text-[#154a56]'
+                        : 'border-slate-200 bg-white text-[#525d66] '
                     }`}
                   >
                     <span className={`block w-full h-1 rounded-full mb-1.5 bg-gradient-to-r ${item.color}`} />
@@ -248,7 +248,7 @@ export default function LightingSimulator() {
                 <Layers className="w-3.5 h-3.5 text-[#154a56]" /> Architectural Fixture Layers
               </label>
               <div className="space-y-2">
-                <label className="flex items-center justify-between p-2.5 rounded-lg bg-white border border-slate-200 cursor-pointer hover:bg-slate-50 transition text-xs font-medium">
+                <label className="flex items-center justify-between p-2.5 rounded-lg bg-white border border-slate-200 cursor-pointer transition text-xs font-medium">
                   <span className="text-[#231f20]">Downlights (Direct Lux)</span>
                   <input
                     type="checkbox"
@@ -257,7 +257,7 @@ export default function LightingSimulator() {
                     className="w-4 h-4 rounded text-[#154a56] focus:ring-0"
                   />
                 </label>
-                <label className="flex items-center justify-between p-2.5 rounded-lg bg-white border border-slate-200 cursor-pointer hover:bg-slate-50 transition text-xs font-medium">
+                <label className="flex items-center justify-between p-2.5 rounded-lg bg-white border border-slate-200 cursor-pointer transition text-xs font-medium">
                   <span className="text-[#231f20]">Cove Linear LED (Indirect Accent)</span>
                   <input
                     type="checkbox"
@@ -266,7 +266,7 @@ export default function LightingSimulator() {
                     className="w-4 h-4 rounded text-[#154a56] focus:ring-0"
                   />
                 </label>
-                <label className="flex items-center justify-between p-2.5 rounded-lg bg-white border border-slate-200 cursor-pointer hover:bg-slate-50 transition text-xs font-medium">
+                <label className="flex items-center justify-between p-2.5 rounded-lg bg-white border border-slate-200 cursor-pointer transition text-xs font-medium">
                   <span className="text-[#231f20]">Magnetic Accent Spotlights</span>
                   <input
                     type="checkbox"
@@ -290,7 +290,7 @@ export default function LightingSimulator() {
                 setSpotsActive(true);
                 setDirectActive(true);
               }}
-              className="text-xs text-[#525d66] hover:text-[#154a56] font-semibold flex items-center gap-1 transition"
+              className="text-xs text-[#525d66] font-semibold flex items-center gap-1 transition"
             >
               <RefreshCw className="w-3.5 h-3.5 text-[#154a56]" /> Reset to Villa Evening
             </button>

@@ -6,7 +6,7 @@ export default function BrandsSection() {
   return (
     <section className="relative py-16 bg-white border-t border-slate-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f0f5f7] border border-[#154a56]/20 text-[#154a56] text-xs font-bold uppercase tracking-wider mb-2">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#d7d225]/20 border border-[#d7d225]/40 text-[#154a56] text-xs font-bold uppercase tracking-wider mb-2">
           <Award className="w-3.5 h-3.5 text-[#154a56]" />
           Global Supply Network
         </div>
@@ -28,9 +28,9 @@ export default function BrandsSection() {
           {BRANDS.concat(BRANDS).map((brand, idx) => (
             <div
               key={idx}
-              className="bg-[#f8fafb] border border-slate-200 hover:border-[#154a56] rounded-2xl px-7 py-4 flex flex-col items-center justify-center min-w-[190px] transition-all hover:scale-105 group shadow-sm hover:shadow-md"
+              className="bg-[#f8fafb] border border-slate-200 rounded-2xl px-7 py-4 flex flex-col items-center justify-center min-w-[190px] transition-all group shadow-sm "
             >
-              <span className="text-base font-extrabold text-[#154a56] group-hover:text-[#0d2f37] transition tracking-wide">
+              <span className="text-base font-extrabold text-[#154a56] transition tracking-wide">
                 {brand.name}
               </span>
               <span className="text-[10px] text-[#525d66] font-mono mt-0.5">

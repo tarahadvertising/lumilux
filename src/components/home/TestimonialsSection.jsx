@@ -27,8 +27,8 @@ export default function TestimonialsSection() {
     <section className="relative py-20 bg-[#f8fafb] border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#f0f5f7] border border-[#154a56]/20 text-[#154a56] text-xs font-bold uppercase tracking-wider mb-2">
-            <Star className="w-3.5 h-3.5 fill-[#b8982f] text-[#b8982f]" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#d7d225]/20 border border-[#d7d225]/40 text-[#154a56] text-xs font-bold uppercase tracking-wider mb-2">
+            <Star className="w-3.5 h-3.5 fill-[#d7d225] text-[#154a56]" />
             Client & Consultant Endorsements
           </div>
           <h2 className="text-3xl font-extrabold text-[#154a56]">
@@ -40,7 +40,7 @@ export default function TestimonialsSection() {
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="bg-white p-7 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-[#154a56] transition-all hover:-translate-y-1 shadow-sm hover:shadow-xl"
+              className="bg-white p-7 rounded-2xl border border-slate-200 border-t-4 border-t-[#d7d225] flex flex-col justify-between transition-all shadow-sm "
             >
               <div>
                 <div className="flex items-center gap-1 text-[#b8982f] mb-4">

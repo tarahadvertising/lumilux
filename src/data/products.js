@@ -29,7 +29,7 @@ export const PRODUCTS = [
     dimming: "DALI-2 / 0-10V / Phase / Non-Dim",
     description: "Deep recessed architectural downlight with interchangeable dark-light secondary reflector louvers for glare-free visual comfort (UGR < 16).",
     finish: "Matte White / Textured Obsidian Black / Brushed Gold Reflector",
-    image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
+    image: "/product-lumicurve-downlight.jpg",
     featured: true
   },
   {
@@ -47,7 +47,7 @@ export const PRODUCTS = [
     dimming: "DALI / 24V PWM / Casambi",
     description: "Flangeless trimless extrusion designed for flush drywall integration, delivering uninterrupted continuous ribbons of light without visible joints.",
     finish: "Mill Finish / Anodized Aluminum / Custom Powdercoat",
-    image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80",
+    image: "/product-aeroline-trimless.jpg",
     featured: true
   },
   {
@@ -65,7 +65,7 @@ export const PRODUCTS = [
     dimming: "DALI-2 / 1-10V / Wireless BLE Mesh",
     description: "Ultra-slim 25mm surface, recessed, or suspended 48V magnetic architectural track system with tool-free click-and-slide luminaire modules.",
     finish: "Anodized Architectural Black / Pure Architectural White",
-    image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+    image: "/product-magnatrack-system.jpg",
     featured: true
   },
   {
@@ -83,7 +83,7 @@ export const PRODUCTS = [
     dimming: "PWM / 0-10V / DALI-2 Driver Compatible",
     description: "Continuous linear phosphor coating completely eliminates spotty LED diode dots, even behind shallow profiles and cove ceiling reveals.",
     finish: "Gold Plated 3oz Copper PCB",
-    image: "https://images.unsplash.com/photo-1565814636199-ae8133055c1c?auto=format&fit=crop&w=800&q=80",
+    image: "/product-ultradotless-cob-strip.jpg",
     featured: true
   },
   {
@@ -101,7 +101,7 @@ export const PRODUCTS = [
     dimming: "DALI-2 / Push-Dim (Dim to 0.1% Zero Flicker)",
     description: "Engineered specifically for high-end residential and hotel projects, providing IEEE 1789 flicker-exempt dimming and robust surge protection.",
     finish: "Low-profile Aluminum Heatsink",
-    image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80",
+    image: "/product-lumidrive-dali-driver.jpg",
     featured: false
   },
   {
@@ -119,7 +119,7 @@ export const PRODUCTS = [
     dimming: "DMX512 / DALI-2 / 24V DC",
     description: "Heavy-duty 316L stainless steel inground architectural linear luminaire engineered to withstand UAE desert sand, heat, and coastal humidity.",
     finish: "Marine Grade 316L Stainless Steel Front Bezel",
-    image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
+    image: "/product-facadepro-inground-uplighter.jpg",
     featured: true
   },
   {
@@ -137,7 +137,7 @@ export const PRODUCTS = [
     dimming: "DALI / PWM / 0-10V",
     description: "Sculptural continuous cylindrical neon flex that can be suspended freely or shaped into organic curved luminous waves.",
     finish: "Opal Diffused Anti-Yellowing Silicone",
-    image: "https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?auto=format&fit=crop&w=800&q=80",
+    image: "/product-silicone-neon-flex.jpg",
     featured: false
   },
   {
@@ -155,7 +155,7 @@ export const PRODUCTS = [
     dimming: "DALI-2 / 0-10V Direct Loop Output",
     description: "Discrete flush ceiling sensor combining micro-radar presence detection with continuous closed-loop daylight harvesting to reduce energy use by up to 65%.",
     finish: "Ultra-miniature 35mm Bezel Matte White",
-    image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
+    image: "/product-lumisense-sensor.jpg",
     featured: false
   }
 ];

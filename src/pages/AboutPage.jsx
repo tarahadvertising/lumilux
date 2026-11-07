@@ -10,7 +10,8 @@ export default function AboutPage({ onOpenQuote }) {
       {/* 1. Page Header Banner */}
       <PageHeader
         title="About Lumilux Lighting"
-        subtitle="Lumilux Lighting Electrical Fitting Trading L.L.C is a premier UAE-based architectural lighting engineering firm dedicated to high-precision illumination, smart control, and bespoke fabrication."
+        subtitle="Lumilux Lighting Electrical Fitting Trading 
+         is a premier UAE-based architectural lighting engineering firm dedicated to high-precision illumination, smart control, and bespoke fabrication."
         bgImage="/about-hero-bg.jpg"
       />
       {/* 2. Brand Heritage Narrative (Brand Guideline Book Page 2) */}
@@ -18,7 +19,7 @@ export default function AboutPage({ onOpenQuote }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-5">
-              <span className="text-xs uppercase tracking-widest font-bold text-[#154a56] block">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#d7d225]/20 text-[#154a56] font-bold text-xs uppercase tracking-wider mb-2 border border-[#d7d225]/40">
                 Brand Heritage & Philosophy
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#154a56] leading-tight">
@@ -34,10 +35,10 @@ export default function AboutPage({ onOpenQuote }) {
               <div className="pt-2">
                 <button
                   onClick={() => onOpenQuote()}
-                  className="px-6 py-3 rounded-xl text-xs font-bold bg-[#154a56] text-white hover:bg-[#0f343d] transition flex items-center gap-2 shadow-xs"
+                  className="px-6 py-3 rounded-xl text-xs font-extrabold bg-[#d7d225] text-[#154a56] transition flex items-center gap-2 shadow-md tracking-wider"
                 >
                   <span>REQUEST CORPORATE CONSULTATION</span>
-                  <ArrowRight className="w-4 h-4 text-[#d7d225]" />
+                  <ArrowRight className="w-4 h-4 text-[#154a56]" />
                 </button>
               </div>
             </div>
@@ -68,8 +69,8 @@ export default function AboutPage({ onOpenQuote }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-xs">
-              <div className="w-12 h-12 rounded-xl bg-[#f0f5f7] border border-[#154a56]/15 flex items-center justify-center text-[#154a56] mb-5">
+            <div className="p-8 rounded-2xl bg-white border border-slate-200 border-t-4 border-t-[#d7d225] shadow-xs">
+              <div className="w-12 h-12 rounded-xl bg-[#d7d225] flex items-center justify-center text-[#154a56] mb-5 shadow-sm font-bold">
                 <Eye className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-[#154a56]">Our Vision</h3>
@@ -78,8 +79,8 @@ export default function AboutPage({ onOpenQuote }) {
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-xs">
-              <div className="w-12 h-12 rounded-xl bg-[#f0f5f7] border border-[#154a56]/15 flex items-center justify-center text-[#154a56] mb-5">
+            <div className="p-8 rounded-2xl bg-white border border-slate-200 border-t-4 border-t-[#d7d225] shadow-xs">
+              <div className="w-12 h-12 rounded-xl bg-[#d7d225] flex items-center justify-center text-[#154a56] mb-5 shadow-sm font-bold">
                 <Target className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-[#154a56]">Our Mission</h3>
@@ -88,8 +89,8 @@ export default function AboutPage({ onOpenQuote }) {
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-white border border-slate-200 shadow-xs">
-              <div className="w-12 h-12 rounded-xl bg-[#f0f5f7] border border-[#154a56]/15 flex items-center justify-center text-[#154a56] mb-5">
+            <div className="p-8 rounded-2xl bg-white border border-slate-200 border-t-4 border-t-[#d7d225] shadow-xs">
+              <div className="w-12 h-12 rounded-xl bg-[#d7d225] flex items-center justify-center text-[#154a56] mb-5 shadow-sm font-bold">
                 <Compass className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-[#154a56]">Core Values</h3>
@@ -105,7 +106,7 @@ export default function AboutPage({ onOpenQuote }) {
       <section className="py-20 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
-            <span className="text-xs uppercase tracking-widest font-bold text-[#154a56] block mb-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#d7d225]/20 text-[#154a56] font-bold text-xs uppercase tracking-wider mb-2 border border-[#d7d225]/40">
               Quality Assurance
             </span>
             <h2 className="text-3xl font-extrabold text-[#154a56]">
@@ -117,32 +118,32 @@ export default function AboutPage({ onOpenQuote }) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl bg-[#f8fafb] border border-slate-200">
-              <Award className="w-8 h-8 text-[#154a56] mb-3" />
+            <div className="p-6 rounded-2xl bg-[#f8fafb] border border-slate-200 border-l-4 border-l-[#d7d225]">
+              <Award className="w-8 h-8 text-[#d7d225] mb-3" />
               <h4 className="text-sm font-bold text-[#154a56]">ISO 9001:2015 Certified</h4>
               <p className="text-xs text-[#525d66] mt-2 leading-relaxed">
                 Comprehensive quality management system ensuring systematic documentation, order tracking, and defect prevention.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#f8fafb] border border-slate-200">
-              <ShieldCheck className="w-8 h-8 text-[#154a56] mb-3" />
+            <div className="p-6 rounded-2xl bg-[#f8fafb] border border-slate-200 border-l-4 border-l-[#d7d225]">
+              <ShieldCheck className="w-8 h-8 text-[#d7d225] mb-3" />
               <h4 className="text-sm font-bold text-[#154a56]">Estidama Pearl Aligned</h4>
               <p className="text-xs text-[#525d66] mt-2 leading-relaxed">
                 Fixtures and controls optimized to earn maximum energy and light pollution credits for Abu Dhabi & UAE green building mandates.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#f8fafb] border border-slate-200">
-              <Zap className="w-8 h-8 text-[#154a56] mb-3" />
+            <div className="p-6 rounded-2xl bg-[#f8fafb] border border-slate-200 border-l-4 border-l-[#d7d225]">
+              <Zap className="w-8 h-8 text-[#d7d225] mb-3" />
               <h4 className="text-sm font-bold text-[#154a56]">CIBSE / EN 12464 Lux</h4>
               <p className="text-xs text-[#525d66] mt-2 leading-relaxed">
                 Calculations ensure required minimum lux thresholds, uniformity ratios (Uo &gt; 0.6), and unified glare ratings (UGR &lt; 16).
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#f8fafb] border border-slate-200">
-              <Cpu className="w-8 h-8 text-[#154a56] mb-3" />
+            <div className="p-6 rounded-2xl bg-[#f8fafb] border border-slate-200 border-l-4 border-l-[#d7d225]">
+              <Cpu className="w-8 h-8 text-[#d7d225] mb-3" />
               <h4 className="text-sm font-bold text-[#154a56]">DALI-2 / KNX Native</h4>
               <p className="text-xs text-[#525d66] mt-2 leading-relaxed">
                 Full compatibility with commercial building management systems (BMS) for smooth logarithmic dimming down to 0.1%.
@@ -166,13 +167,13 @@ export default function AboutPage({ onOpenQuote }) {
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={() => onOpenQuote()}
-              className="px-6 py-3 rounded-xl text-xs font-bold bg-[#154a56] text-white hover:bg-[#0f343d] transition shadow-xs"
+              className="px-6 py-3 rounded-xl text-xs font-extrabold bg-[#d7d225] text-[#154a56] transition shadow-md tracking-wider"
             >
               SCHEDULE TECHNICAL CONSULTATION
             </button>
             <Link
               to="/services"
-              className="px-6 py-3 rounded-xl text-xs font-bold bg-[#f8fafb] border border-slate-300 text-[#154a56] hover:bg-slate-50 transition"
+              className="px-6 py-3 rounded-xl text-xs font-bold bg-[#f8fafb] border border-slate-300 text-[#154a56] transition"
             >
               Explore Our Services
             </Link>

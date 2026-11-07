@@ -45,11 +45,11 @@ export default function QuoteModal({ isOpen, onClose, initialData = null }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-opacity">
-      <div className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-2xl max-h-[92vh] overflow-y-auto text-[#231f20]">
+      <div className="relative w-full max-w-2xl bg-white border border-slate-200 border-t-4 border-t-[#d7d225] rounded-3xl p-6 sm:p-8 shadow-2xl max-h-[92vh] overflow-y-auto text-[#231f20]">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-[#231f20] transition"
+          className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 text-slate-500 transition"
         >
           <X className="w-5 h-5" />
         </button>
@@ -71,7 +71,7 @@ export default function QuoteModal({ isOpen, onClose, initialData = null }) {
             <div className="pt-4">
               <button
                 onClick={handleReset}
-                className="px-6 py-2.5 rounded-xl bg-[#154a56] hover:bg-[#0e353e] text-white font-bold text-sm transition"
+                className="px-6 py-2.5 rounded-xl bg-[#d7d225] text-[#154a56] font-extrabold text-sm transition shadow-sm tracking-wider"
               >
                 Done & Return to Site
               </button>
@@ -208,9 +208,9 @@ export default function QuoteModal({ isOpen, onClose, initialData = null }) {
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#154a56] hover:bg-[#0e353e] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#d7d225] text-[#154a56] font-extrabold text-xs flex items-center justify-center gap-2 shadow-md transition tracking-wider"
                 >
-                  <Send className="w-4 h-4 text-[#d7d225]" />
+                  <Send className="w-4 h-4 text-[#154a56]" />
                   Submit Official Request
                 </button>
               </div>

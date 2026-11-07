@@ -14,8 +14,8 @@ export default function HeroSection({ onOpenQuote, onOpenSimulator }) {
           {/* Left Column: Headlines & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* Brand Intro Pill */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#f0f5f7] border border-[#154a56]/15 text-xs font-semibold text-[#154a56]">
-              <span className="w-2 h-2 rounded-full bg-[#154a56]" />
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#d7d225]/20 border border-[#d7d225]/40 text-xs font-semibold text-[#154a56]">
+              <span className="w-2 h-2 rounded-full bg-[#d7d225]" />
               <span className="uppercase tracking-wider">
                 Lumilux Lighting Electrical Fitting Trading L.L.C
               </span>
@@ -48,17 +48,17 @@ export default function HeroSection({ onOpenQuote, onOpenSimulator }) {
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <button
                 onClick={() => onOpenQuote()}
-                className="px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-[#154a56] hover:bg-[#0d2f37] text-white flex items-center gap-2 shadow-sm transition-all group"
+                className="px-6 py-3.5 rounded-xl font-extrabold text-xs sm:text-sm bg-[#d7d225] text-[#154a56] flex items-center gap-2 shadow-md transition-all tracking-wider"
               >
                 <span>REQUEST FREE CONSULTATION</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-[#154a56]" />
               </button>
 
               <button
                 onClick={onOpenSimulator}
-                className="px-5 py-3.5 rounded-xl font-semibold text-xs sm:text-sm bg-[#f8fafb] border border-slate-300 hover:border-[#154a56] text-[#154a56] flex items-center gap-2 transition hover:bg-white"
+                className="px-5 py-3.5 rounded-xl font-semibold text-xs sm:text-sm bg-[#f8fafb] border border-slate-300 text-[#154a56] flex items-center gap-2 transition "
               >
-                <Sparkles className="w-4 h-4 text-[#b8982f]" />
+                <Sparkles className="w-4 h-4 text-[#d7d225]" />
                 <span>Launch Lighting Lab</span>
               </button>
             </div>
@@ -66,15 +66,15 @@ export default function HeroSection({ onOpenQuote, onOpenSimulator }) {
             {/* Quick Proof Badges in Clean Light Grid */}
             <div className="pt-6 border-t border-slate-200 grid grid-cols-3 gap-6 max-w-lg">
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-[#154a56] font-mono">500+</div>
+                <div className="text-2xl sm:text-3xl font-black text-[#d7d225] font-mono">500+</div>
                 <div className="text-xs text-[#525d66] mt-0.5 font-medium">UAE Projects Built</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-[#154a56] font-mono">100%</div>
+                <div className="text-2xl sm:text-3xl font-black text-[#d7d225] font-mono">100%</div>
                 <div className="text-xs text-[#525d66] mt-0.5 font-medium">Client Satisfaction</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-[#154a56] font-mono">ISO 9001</div>
+                <div className="text-2xl sm:text-3xl font-black text-[#d7d225] font-mono">ISO 9001</div>
                 <div className="text-xs text-[#525d66] mt-0.5 font-medium">Quality Certified</div>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function HeroSection({ onOpenQuote, onOpenSimulator }) {
           {/* Right Column: Hero Visual Showcase Card in Clean White */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-xl">
+              <div className="relative bg-white border border-slate-200 border-t-4 border-t-[#d7d225] rounded-3xl overflow-hidden shadow-xl">
                 {/* Hero Showcase Image */}
                 <div className="relative h-72 sm:h-80 overflow-hidden bg-slate-100">
                   <img
@@ -94,11 +94,11 @@ export default function HeroSection({ onOpenQuote, onOpenSimulator }) {
                   
                   {/* Floating Top Badge */}
                   <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-200 text-xs text-[#154a56] flex items-center gap-2 shadow-sm font-semibold">
-                    <span className="w-2 h-2 rounded-full bg-[#154a56]" />
+                    <span className="w-2 h-2 rounded-full bg-[#d7d225]" />
                     <span>Palm Jumeirah Signature Estate</span>
                   </div>
 
-                  <div className="absolute top-4 right-4 bg-[#154a56] text-white font-bold px-2.5 py-1 rounded-md text-[10px] uppercase tracking-wider">
+                  <div className="absolute top-4 right-4 bg-[#d7d225] text-[#154a56] font-extrabold px-2.5 py-1 rounded-md text-[10px] uppercase tracking-wider shadow-sm">
                     Featured
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export default function HeroSection({ onOpenQuote, onOpenSimulator }) {
 
                   <button
                     onClick={() => onOpenQuote()}
-                    className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-[#f0f5f7] hover:bg-[#e4eff2] text-[#154a56] border border-[#154a56]/20 flex items-center justify-between transition"
+                    className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-[#f0f5f7] text-[#154a56] border border-[#154a56]/20 flex items-center justify-between transition"
                   >
                     <span>Explore Dialux Project Schedule</span>
                     <ChevronRight className="w-4 h-4 text-[#154a56]" />

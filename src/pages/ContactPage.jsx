@@ -70,7 +70,7 @@ export default function ContactPage() {
                   <p className="text-[11px] text-slate-400">We will respond within 24 business hours.</p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-4 px-6 py-2 rounded-xl bg-[#154a56] text-white text-xs font-bold hover:bg-[#0f343d] transition"
+                    className="mt-4 px-6 py-2 rounded-xl bg-[#d7d225] text-[#154a56] text-xs font-extrabold transition shadow-sm"
                   >
                     Submit Another Request
                   </button>
@@ -170,9 +170,9 @@ export default function ContactPage() {
                   <div className="pt-2 flex justify-end">
                     <button
                       type="submit"
-                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#154a56] hover:bg-[#0f343d] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xs transition"
+                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#d7d225] text-[#154a56] font-extrabold text-xs flex items-center justify-center gap-2 shadow-md transition tracking-wider"
                     >
-                      <Send className="w-4 h-4 text-[#d7d225]" />
+                      <Send className="w-4 h-4 text-[#154a56]" />
                       Submit Official Inquiry
                     </button>
                   </div>
@@ -183,7 +183,7 @@ export default function ContactPage() {
             {/* Direct Connect Column (Cols 8-12) */}
             <div className="lg:col-span-5 space-y-6">
               {/* WhatsApp Fast Track Card */}
-              <div className="bg-[#154a56] rounded-3xl p-8 text-white shadow-xl">
+              <div className="bg-[#154a56] border-t-4 border-t-[#d7d225] rounded-3xl p-8 text-white shadow-xl">
                 <span className="text-xs uppercase font-bold text-[#d7d225] tracking-wider block mb-1">
                   Fast Direct Line
                 </span>
@@ -195,7 +195,7 @@ export default function ContactPage() {
                   href={COMPANY_INFO.socials.whatsapp}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#d7d225] hover:bg-[#c4bf1d] text-[#154a56] font-bold text-xs shadow-sm transition"
+                  className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#d7d225] text-[#154a56] font-bold text-xs shadow-sm transition"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Start WhatsApp Conversation</span>

@@ -34,10 +34,10 @@ export default function LuxCalculator({ onOpenQuote }) {
   const wattsPerSqm = (totalWatts / (area || 1)).toFixed(1);
 
   return (
-    <div className="relative bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 overflow-hidden shadow-xl">
+    <div className="relative bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 border-t-4 border-t-[#d7d225] overflow-hidden shadow-xl">
       {/* Title */}
       <div className="relative z-10 max-w-3xl mb-8">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f0f5f7] border border-[#154a56]/20 text-[#154a56] text-xs font-bold uppercase tracking-wider mb-3">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#d7d225]/20 border border-[#d7d225]/40 text-[#154a56] text-xs font-bold uppercase tracking-wider mb-3">
           <Calculator className="w-3.5 h-3.5 text-[#154a56]" />
           Architectural Engineering Suite
         </div>
@@ -64,8 +64,8 @@ export default function LuxCalculator({ onOpenQuote }) {
                   onClick={() => setSelectedSpaceId(space.id)}
                   className={`p-3.5 rounded-xl border text-left transition-all ${
                     selectedSpaceId === space.id
-                      ? 'bg-[#154a56] border-[#154a56] text-white shadow-sm ring-2 ring-[#154a56]/20'
-                      : 'bg-[#f8fafb] border-slate-200 text-[#525d66] hover:text-[#154a56] hover:border-slate-300'
+                      ? 'bg-[#154a56] border-[#d7d225] text-white shadow-sm ring-2 ring-[#d7d225]'
+                      : 'bg-[#f8fafb] border-slate-200 text-[#525d66] '
                   }`}
                 >
                   <div className={`font-bold text-xs truncate ${selectedSpaceId === space.id ? 'text-white' : 'text-[#231f20]'}`}>
@@ -145,7 +145,7 @@ export default function LuxCalculator({ onOpenQuote }) {
         </div>
 
         {/* Calculation Output Card (Cols 8-12) in Authoritative Lumilux Petrol Teal */}
-        <div className="lg:col-span-5 bg-[#154a56] rounded-2xl p-6 sm:p-7 text-white shadow-xl relative">
+        <div className="lg:col-span-5 bg-[#154a56] rounded-2xl p-6 sm:p-7 text-white shadow-xl relative border-t-4 border-t-[#d7d225]">
           <div className="flex items-center justify-between pb-4 border-b border-white/15">
             <div>
               <span className="text-[11px] text-white/70 uppercase tracking-widest font-semibold">Photometric Calculation</span>
@@ -211,7 +211,7 @@ export default function LuxCalculator({ onOpenQuote }) {
               lumens: `${totalLumens.toLocaleString()} lm`,
               fixtures: `${fixtureCount} units of ${activeSpace.luminaire}`
             })}
-            className="w-full py-3.5 px-4 rounded-xl font-bold text-xs bg-white hover:bg-slate-100 text-[#154a56] flex items-center justify-center gap-2 shadow-sm transition-all"
+            className="w-full py-3.5 px-4 rounded-xl font-extrabold text-xs bg-[#d7d225] text-[#154a56] flex items-center justify-center gap-2 shadow-md transition-all tracking-wide"
           >
             <span>Request Official Dialux Proposal for this Space</span>
             <ArrowRight className="w-4 h-4" />

@@ -58,7 +58,7 @@ export default function App() {
           <button
             onClick={handleScrollToTop}
             aria-label="Scroll to top"
-            className="w-10 h-10 rounded-full bg-white hover:bg-slate-100 text-[#154a56] border border-slate-200 flex items-center justify-center shadow-md transition"
+            className="w-10 h-10 rounded-full bg-white text-[#154a56] border border-slate-200 flex items-center justify-center shadow-md transition"
           >
             <ArrowUp className="w-4 h-4" />
           </button>
@@ -68,7 +68,7 @@ export default function App() {
             target="_blank"
             rel="noreferrer"
             aria-label="Contact on WhatsApp"
-            className="w-12 h-12 rounded-full bg-[#154a56] hover:bg-[#0e353e] text-white flex items-center justify-center shadow-lg transition hover:scale-105 border border-[#154a56]"
+            className="w-12 h-12 rounded-full bg-[#154a56] text-white flex items-center justify-center shadow-lg transition border-2 border-[#d7d225]"
           >
             <MessageCircle className="w-6 h-6 text-[#d7d225]" />
           </a>

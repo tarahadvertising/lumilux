@@ -39,7 +39,7 @@ export default function ProcessSection() {
     <section className="relative py-20 lg:py-28 bg-[#f8fafb] border-t border-slate-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f0f5f7] border border-[#154a56]/20 text-[#154a56] text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#d7d225]/20 border border-[#d7d225]/40 text-[#154a56] text-xs font-bold uppercase tracking-wider mb-3">
             <Compass className="w-3.5 h-3.5 text-[#154a56]" />
             Methodology & Standards
           </div>
@@ -56,20 +56,20 @@ export default function ProcessSection() {
           {steps.map((item, index) => (
             <div
               key={item.step}
-              className="group relative bg-white rounded-2xl p-7 border border-slate-200 hover:border-[#154a56] transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl flex flex-col justify-between"
+              className="group relative bg-white rounded-2xl p-7 border border-slate-200 border-t-4 border-t-[#d7d225] transition-all duration-300 shadow-sm flex flex-col justify-between"
             >
               {/* Step indicator header */}
               <div className="flex items-center justify-between mb-4">
                 <span className="text-3xl font-black font-mono text-[#154a56]">
                   {item.step}
                 </span>
-                <span className="w-8 h-8 rounded-full bg-[#f0f5f7] border border-slate-200 flex items-center justify-center text-[#154a56] group-hover:bg-[#154a56] group-hover:text-white transition">
+                <span className="w-8 h-8 rounded-full bg-[#d7d225] flex items-center justify-center text-[#154a56] font-bold shadow-sm">
                   <CheckCircle2 className="w-4 h-4" />
                 </span>
               </div>
 
               <div>
-                <h3 className="text-base font-bold text-[#231f20] group-hover:text-[#154a56] transition mb-2">
+                <h3 className="text-base font-bold text-[#231f20] transition mb-2">
                   {item.title}
                 </h3>
                 <p className="text-xs text-[#525d66] leading-relaxed">

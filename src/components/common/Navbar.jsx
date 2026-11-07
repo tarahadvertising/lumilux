@@ -45,12 +45,12 @@ export default function Navbar({ onOpenQuote }) {
   return (
     <header className="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
 
-      {/* Main Clean White Navigation Bar */}
-      <nav className={`transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs py-3' : 'bg-white/95 backdrop-blur-md border-b border-slate-100 py-4'}`}>
+      {/* Main Navigation Bar in Lumilux Petrol Teal (#154a56) */}
+      <nav className={`transition-all duration-300 ${scrolled ? 'bg-[#154a56]/95 backdrop-blur-md shadow-md py-3' : 'bg-[#154a56] py-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Brand Logo in Teal on White */}
+          {/* Brand Logo in Reversed White on Teal */}
           <Link to="/" className="flex items-center gap-3">
-            <BrandLogo variant="dark" className="h-8 sm:h-9" showTagline={!scrolled} />
+            <BrandLogo variant="white" className="h-8 sm:h-9" />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -68,27 +68,27 @@ export default function Navbar({ onOpenQuote }) {
                       className={({ isActive }) =>
                         `flex items-center gap-1 py-2 transition ${
                           isActive
-                            ? 'text-[#154a56] font-bold border-b-2 border-[#154a56]'
-                            : 'text-[#154a56] hover:text-[#b8982f]'
+                            ? 'text-[#d7d225] font-bold'
+                            : 'text-white/90 '
                         }`
                       }
                     >
                       <span>{link.label}</span>
-                      <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 text-[#154a56]" />
+                      <ChevronDown className="w-3.5 h-3.5 transition-transform text-white/80 " />
                     </NavLink>
 
-                    {/* Dropdown Menu in Clean White */}
+                    {/* Dropdown Menu */}
                     {servicesDropdown && (
                       <div className="absolute top-full left-0 w-64 pt-2 z-50">
-                        <div className="bg-white border border-slate-200 rounded-2xl p-2 shadow-xl">
+                        <div className="bg-[#123e48] border border-[#1c5d6c] rounded-2xl p-2 shadow-2xl">
                           {link.items.map((item) => (
                             <Link
                               key={item.title}
                               to={item.path}
-                              className="w-full text-left px-3 py-2.5 rounded-xl text-xs text-[#231f20] hover:text-[#154a56] hover:bg-[#f2f7f8] transition flex items-center justify-between group/item font-medium"
+                              className="w-full text-left px-3 py-2.5 rounded-xl text-xs text-white/90 transition flex items-center justify-between group/item font-medium"
                             >
                               <span>{item.title}</span>
-                              <ArrowRight className="w-3 h-3 text-slate-400 group-hover/item:text-[#154a56] group-hover/item:translate-x-0.5 transition" />
+                              <ArrowRight className="w-3 h-3 text-white/40 transition" />
                             </Link>
                           ))}
                         </div>
@@ -102,8 +102,8 @@ export default function Navbar({ onOpenQuote }) {
                     className={({ isActive }) =>
                       `py-2 transition relative ${
                         isActive
-                          ? 'text-[#154a56] font-bold border-b-2 border-[#154a56]'
-                          : 'text-[#154a56] hover:text-[#b8982f]'
+                          ? 'text-[#d7d225] font-bold'
+                          : 'text-white/90 '
                       }`
                     }
                   >
@@ -114,21 +114,21 @@ export default function Navbar({ onOpenQuote }) {
             ))}
           </div>
 
-          {/* Action CTA */}
+          {/* Action CTA in Signature Lumilux Yellow */}
           <div className="hidden sm:flex items-center space-x-3">
             <Link
               to="/contact"
-              className="px-4 py-2.5 rounded-xl text-xs font-bold bg-[#154a56] text-white hover:bg-[#0f343d] shadow-xs transition-all flex items-center gap-1.5"
+              className="px-4 py-2.5 rounded-xl text-xs font-extrabold bg-[#d7d225] text-[#154a56] shadow-md transition-all flex items-center gap-1.5 tracking-wider"
             >
               <span>GET A QUOTE</span>
-              <ArrowRight className="w-3 h-3 text-[#d7d225]" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#154a56]" />
             </Link>
           </div>
 
           {/* Mobile Menu Hamburger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl bg-slate-100 text-[#154a56] hover:bg-slate-200 transition"
+            className="lg:hidden p-2 rounded-xl bg-white/10 text-white transition"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -136,9 +136,9 @@ export default function Navbar({ onOpenQuote }) {
         </div>
       </nav>
 
-      {/* Mobile Drawer Menu in Clean White */}
+      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl">
+        <div className="lg:hidden bg-[#154a56] border-b border-[#1c5d6c] px-6 py-6 space-y-4 shadow-2xl">
           <div className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <NavLink
@@ -147,8 +147,8 @@ export default function Navbar({ onOpenQuote }) {
                 end={link.path === '/'}
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `text-left text-sm font-semibold py-2.5 border-b border-slate-100 transition ${
-                    isActive ? 'text-[#154a56] font-bold' : 'text-[#525d66] hover:text-[#154a56]'
+                  `text-left text-sm font-semibold py-2.5 border-b border-white/10 transition ${
+                    isActive ? 'text-[#d7d225] font-bold' : 'text-white/80 '
                   }`
                 }
               >
@@ -161,17 +161,17 @@ export default function Navbar({ onOpenQuote }) {
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3 rounded-xl text-xs font-bold bg-[#154a56] text-white flex items-center justify-center gap-2 shadow-xs"
+              className="w-full py-3 rounded-xl text-xs font-extrabold bg-[#d7d225] text-[#154a56] flex items-center justify-center gap-2 shadow-md tracking-wider"
             >
               <span>Request Free Consultation</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#d7d225]" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#154a56]" />
             </Link>
           </div>
 
-          <div className="pt-4 border-t border-slate-200 text-xs text-[#525d66] space-y-1.5">
-            <div>Dubai Desk: <a href="tel:+97145540958" className="text-[#154a56] font-bold">04 554 0958</a></div>
-            <div>Abu Dhabi Desk: <a href="tel:+97125849831" className="text-[#154a56] font-bold">02 584 9831</a></div>
-            <div>Email: <a href={`mailto:${COMPANY_INFO.headquarters.email}`} className="text-[#154a56] font-medium">{COMPANY_INFO.headquarters.email}</a></div>
+          <div className="pt-4 border-t border-white/10 text-xs text-white/70 space-y-1.5">
+            <div>Dubai Desk: <a href="tel:+97145540958" className="text-white font-bold">04 554 0958</a></div>
+            <div>Abu Dhabi Desk: <a href="tel:+97125849831" className="text-white font-bold">02 584 9831</a></div>
+            <div>Email: <a href={`mailto:${COMPANY_INFO.headquarters.email}`} className="text-[#d7d225] font-medium">{COMPANY_INFO.headquarters.email}</a></div>
           </div>
         </div>
       )}

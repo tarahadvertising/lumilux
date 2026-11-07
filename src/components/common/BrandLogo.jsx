@@ -11,7 +11,7 @@ export default function BrandLogo({ variant = 'dark', className = 'h-9', showTag
       <div className={`relative inline-flex items-center justify-center group ${className}`}>
         <svg
           viewBox="0 0 74.96 71.07"
-          className="h-full w-auto transition-transform duration-300 group-hover:scale-105"
+          className="h-full w-auto transition-transform duration-300 "
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -33,7 +33,7 @@ export default function BrandLogo({ variant = 'dark', className = 'h-9', showTag
       <div className={`relative flex items-center ${className}`}>
         <svg
           viewBox="0 0 422.3 97.08"
-          className="h-full w-auto transition-all duration-300 group-hover:opacity-95"
+          className="h-full w-auto transition-all duration-300 "
           xmlns="http://www.w3.org/2000/svg"
         >
           {/* Letters L, U, M, I stem, L, U, X */}
@@ -82,12 +82,6 @@ export default function BrandLogo({ variant = 'dark', className = 'h-9', showTag
           </g>
         </svg>
       </div>
-
-      {showTagline && (
-        <span className={`text-[9px] uppercase tracking-[0.26em] font-bold mt-1 pl-0.5 ${variant === 'white' ? 'text-white/80' : 'text-[#154a56]'}`}>
-          Lighting Electrical Fitting Trading L.L.C
-        </span>
-      )}
     </div>
   );
 }

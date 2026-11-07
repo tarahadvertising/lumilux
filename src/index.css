@@ -25,9 +25,6 @@
     background: #154a56;
     border-radius: 4px;
   }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #0d2d34;
-  }
 
   ::selection {
     background: #154a56;
@@ -48,12 +45,6 @@
   .card-architectural {
     background: #ffffff;
     border: 1px solid rgba(21, 74, 86, 0.12);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  }
-  .card-architectural:hover {
-    border-color: rgba(21, 74, 86, 0.35);
-    box-shadow: 0 16px 32px -4px rgba(21, 74, 86, 0.12);
-    transform: translateY(-3px);
   }
 }
 
@@ -69,6 +60,7 @@
   animation: marquee 34s linear infinite;
 }
 
-.animate-marquee:hover {
-  animation-play-state: paused;
+/* Global hover effect neutralization */
+*:hover {
+  transform: none !important;
 }

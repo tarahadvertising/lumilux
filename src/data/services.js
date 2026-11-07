@@ -11,6 +11,7 @@ export const SERVICES = [
     tagline: "Professional installation for residential, commercial & architectural spaces",
     shortDesc: "Turnkey installation services by certified electricians ensuring safety, code compliance, and flawless fixture alignment.",
     longDesc: "Expert installation of architectural and decorative lighting systems. From luxury private villas to commercial offices, our certified technicians ensure every fixture is installed with precision, safe wiring, and full UAE code compliance.",
+    image: "/service-light-installation.jpg",
     icon: "Lightbulb",
     badge: "Installation",
     features: [
@@ -32,6 +33,7 @@ export const SERVICES = [
     tagline: "Comprehensive lighting design with 3D modeling and photometric analysis",
     shortDesc: "Complete lighting plans including DIALux calculations, AutoCAD layouts, 3D renderings, and detailed product schedules.",
     longDesc: "Data-driven lighting design combining aesthetics with photometric precision. We deliver DIALux Evo calculations, glare ratings (UGR < 19), 3D photorealistic renderings, and complete BOQ schedules tailored to your project.",
+    image: "/service-design-service.jpg",
     icon: "PencilRuler",
     badge: "Design",
     features: [
@@ -53,6 +55,7 @@ export const SERVICES = [
     tagline: "Intelligent lighting automation with mobile app and voice control",
     shortDesc: "Smart lighting systems featuring automated schedules, motion sensing, daylight harvesting, and voice integration.",
     longDesc: "Experience seamless convenience and energy savings. Control brightness, tunable white scenes, and schedules through iOS/Android apps or voice assistants. Fully compatible with Apple HomeKit, Google Home, and Alexa.",
+    image: "/service-smart-automation.jpg",
     icon: "Cpu",
     badge: "Smart Tech",
     features: [
@@ -74,6 +77,7 @@ export const SERVICES = [
     tagline: "Premium lighting control and smooth flicker-free dimming",
     shortDesc: "Advanced dimming and management systems delivering reliable, flicker-free, and precise control for any application.",
     longDesc: "Industrial-grade control architectures supporting DALI-2, 0-10V, Phase, and dynamic DMX512 systems. Engineered for ultra-smooth logarithmic dimming down to 1% with zero visible camera flicker and silent operation.",
+    image: "/service-light-control.jpg",
     icon: "Sliders",
     badge: "Control Systems",
     features: [
@@ -89,6 +93,7 @@ export const SERVICES = [
       "Centralized DIN-rail panel enclosures & BMS integration"
     ]
   }
+  
 ];
 
 export const SERVICES_DATA = SERVICES;
